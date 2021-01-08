@@ -1,5 +1,8 @@
 This is a simple script designed to let 2 NATed wireguard peers to talk to each other.
 
+This uses socat, so: 
+`apt-get install socat`
+
 `relay.sh <base_port> <count>`
 
 will create <count> udp port pairs where odd/even ports are connected to each other.
@@ -42,7 +45,7 @@ PersistentKeepalive = 25
 ```
 
 To test this run a `ping 10.177.78.11` on node-a and `ping 10.177.78.1` on node-b
- 
+
 Alternatives:
 
 * tailscale will do NAT traversal and proxing automatically.
