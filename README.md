@@ -9,7 +9,7 @@ So suppose you run this script on `public-relay.com`.
 `relay.sh 5000 1`
 Above command would bridge connections between port `public-relay.com:5000` and `public-relay.com:5001`.
 
-So you'd set one wireguard instance to port at port `5000` and the other at `5001` and they would be able to talk each other.
+So you'd set one wireguard instance to point at port `ublic-relay.com:5000` and the other at `public-relay.com:5001` and they would be able to talk each other.
 
 Alternatives:
 
