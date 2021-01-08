@@ -1,4 +1,4 @@
-This is a simple script designed to let 2 NATed wireguard peers to talk to each other.
+This is a simple script designed to let 2 NATed wireguard peers to talk to each other through an internet-facing relay. In this case the relay will just be a dumb udp proxy, without any encryption keys.
 
 This uses socat, so: 
 `apt-get install socat`
