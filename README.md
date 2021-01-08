@@ -1,5 +1,6 @@
 This is a simple script designed to let 2 NATed wireguard peers to talk to each other through an internet-facing relay. In this case the relay will just be a dumb udp proxy, without any encryption keys.
 
+# Relay config
 This uses socat, so: 
 `apt-get install socat`
 
@@ -14,9 +15,9 @@ Above command would bridge connections between port `public-relay.com:5000` and 
 
 So you'd set one wireguard instance to point at port `public-relay.com:5000` and the other at `public-relay.com:5001` and they would be able to talk each other.
 
-Node a:
+# Wireguard config
 ```
-# Hub configuration created on wireguard on Fri Jan  8 06:06:30 UTC 2021
+#Node-a:
 [Interface]
 Address = 10.177.78.1/24
 PrivateKey = AO+/A+ZJwIj5tKS329wMXaEluzmqRMYZfP5FaUF0jEM=
@@ -29,9 +30,8 @@ AllowedIPs = 10.177.78.11/32
 Endpoint = public-relay.com:5000
 ```
 
-Node b:
 ```
-# 11: 11 > wgclient_11.conf
+#Node-b:
 [Interface]
 Address = 10.177.78.11/24
 PrivateKey = iJHQgQO6K7vhaXDnaAO5rBX0V2UTMvsjfG96qOgj31E=
